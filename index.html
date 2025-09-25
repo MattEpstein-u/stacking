@@ -1,0 +1,58 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Stacking Algorithm Explained</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <div id="app">
+        <header>
+            <h1>Interactive Stacking Demo</h1>
+        </header>
+        <main>
+            <div id="controls">
+                <h2>Controls</h2>
+                <div id="dataset-options">
+                    <h3>Dataset</h3>
+                    <label for="dataset-type">Type:</label>
+                    <select id="dataset-type">
+                        <option value="clouds">Two Clouds</option>
+                        <option value="moons" selected>Moons</option>
+                    </select>
+                    <label for="data-points-slider">Data Points:</label>
+                    <div class="slider-container">
+                        <input type="range" id="data-points-slider" min="200" max="1000" step="50" value="600">
+                        <span id="data-points-value">600</span>
+                    </div>
+                    <label for="noise-slider">Noise:</label>
+                    <div class="slider-container">
+                        <input type="range" id="noise-slider" min="0" max="100" value="50">
+                        <span id="noise-value">50</span>
+                    </div>
+                </div>
+                <button id="generate-data-btn">1. Generate Data</button>
+                <button id="train-base-models-btn" disabled>2. Train Base Models</button>
+                <button id="train-meta-model-btn" disabled>3. Train Meta-Model</button>
+                <button id="evaluate-btn" disabled>4. Evaluate Models</button>
+                <button id="reset-btn">Reset</button>
+            </div>
+            <div id="content">
+                <div id="explanation">
+                    <p id="explanation-text">Welcome! Click "Generate Data" to start.</p>
+                </div>
+                <div id="visualization">
+                    <!-- Data and models will be visualized here -->
+                </div>
+                <div id="results">
+                    <h2>Results (Accuracy)</h2>
+                    <div id="results-content"></div>
+                </div>
+            </div>
+        </main>
+    </div>
+    <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
+    <script src="script.js"></script>
+</body>
+</html>
